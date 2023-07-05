@@ -1,10 +1,10 @@
 import "./App.css";
-import Navbar from "./component/Navbar";
 import Selected from "./component/Selected";
 import { PiBinocularsFill } from "react-icons/pi";
 import youtube from "./assets/image/youtube.png";
 import whatsapp from "./assets/image/whatsapp.png";
 import parcel from "./assets/image/parcel.png";
+import Navbar from "./component/Navbar";
 
 function App() {
   return (
