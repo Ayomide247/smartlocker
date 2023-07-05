@@ -44,8 +44,6 @@ const Navbar = () => {
         <li className="py-6 ">Sign In</li>
         <li className="py-6 ">Contact</li>
       </ul>
-
-      {/*Social Icons*/}
     </div>
   );
 };
