@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/image/smartparcel.jpg";
+import { Link } from "react-router-dom";
 
 // import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -11,20 +12,38 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-[80px] top-0 left-0 flex justify-between items-center px-4 bg-[#ffffffff] text-green-700 text-md font-extrabold z-10 shadow">
+    <div className="fixed w-full h-[80px] top-0 left-0 flex justify-between items-center bg-[#ffffffff] text-slate-700 text-md font-medium z-10 shadow px-5 md:px-24">
       <div>
-        <img src={Logo} alt="Logo Image" style={{ width: "200px" }} />
+        <Link to={"/"}>
+          <img src={Logo} alt="Logo Image" style={{ width: "200px" }} />
+        </Link>
       </div>
 
-      {/*Menu*/}
+      <div className="">
+        <ul className="hidden gap-5 md:flex ">
+          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+            How it works
+          </li>
+          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+            Parcel History
+          </li>
+          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+            <Link to={"/SignUp"}>Support</Link>
+          </li>
+        </ul>
+      </div>
 
-      <ul className="hidden gap-5 md:flex ">
-        <li>Track Parcel</li>
-        <li>Parcel History</li>
-        <li>Locker locations</li>
-        <li>Sign In</li>
-        <li>Contact</li>
-      </ul>
+      <div className="justify-between hidden gap-5 lg:flex">
+        <button className="border-2 border-[#FF6000] py-2 px-5 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff]">
+          Login
+        </button>
+        <button className=" py-2 px-5 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#ffffffff] border-2 border-[#FF6000] hover:text-slate-700">
+          Create an account
+        </button>
+      </div>
 
       {/*Hamburger*/}
       <div onClick={handleClick} className="z-10 md:hidden">
