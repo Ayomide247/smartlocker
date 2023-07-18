@@ -52,19 +52,24 @@ const Home = () => {
 
   return (
     <section className="p-0 m-0 text-slate-700">
-      
-      <HeroContainer/>
+
+      <HeroContainer />
 
       <section
         style={bgImgStyle}
         className="w-full h-full md:px-24 py-10 mt-10 text-center bg-fixed md:bg-left bg-no-repeat bg-cover text-[#FF6000]"
       >
         <div className="justify-between gap-24 px-5 py-16 md:flex md:px-24 md:flex-cols-3">
-          <div className="py-16 bg-inherit">
+          <div className="py-16 bg-inherit"
+            data-aos="zoom-in"
+            data-aos-duration="2000">
             <img className="w-[65%] m-auto" src={phone}></img>
           </div>
 
-          <div className="md:w-[50%] m-auto text-center">
+          <div className="md:w-[50%] m-auto text-center"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             <h1 className="font-extrabold md:text-[3rem] text-[2rem] md:text-start">
               Easy & convenient Logistics Service
             </h1>
@@ -86,7 +91,10 @@ const Home = () => {
       <section className="bg-[#f1640cfb] px-5 text-[#ffffffff] py-10 md:px-28">
         <div className="justify-between md:flex md:flex-cols-2">
           <div className="text-center mt-6">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <h1 className="font-extrabold md:text-[3rem] text-[2rem] md:text-start">
                 SmartParcel Logistics Services
               </h1>
@@ -99,14 +107,18 @@ const Home = () => {
                 </span>
               </div>
             </div>
-            <p className="my-2 text-[16px] text-start leading-7 md:w-[50%]">
+            <p className="my-2 text-[16px] text-start leading-7 md:w-[50%]"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               We Executed Partnership with Nigerian Postal Services (NIPOST) for
               deployment of Smart Lockers across 774 local governments and 955
               post offices with over 3000 postal agencies across Nigeria.
             </p>
           </div>
         </div>
-        <div className="flex gap-5 my-7 w-[100%] md:w-[1200px] overflow-x-scroll pb-16">
+        <div className="flex gap-5 my-7 w-[100%] md:w-[1200px] overflow-x-scroll pb-16"
+        >
           {
             servicesData.map((data) => (
               <SingleService key={data.id} data={data} />
@@ -117,11 +129,17 @@ const Home = () => {
       </section>
 
       <section className=" bg-[#FF60001A] md:px-28 px-5 md:pb-32">
-        <h1 className="font-extrabold leading-10 pt-8 text-[1.5rem] md:text-[3rem] text-center md:text-start md:pt-20">
+        <h1 className="font-extrabold leading-10 pt-8 text-[1.5rem] md:text-[3rem] text-center md:text-start md:pt-20"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           Frequently asked questions
         </h1>
         <div className="md:flex items-start">
-          <div className="md:w-[50%]">
+          <div className="md:w-[50%]"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
 
             {
               faqs.map((data, index) => (
@@ -136,7 +154,10 @@ const Home = () => {
 
           </div>
 
-          <div className=" w-[50%] mx-auto ">
+          <div className=" w-[50%] mx-auto"
+            data-aos="slide-left"
+            data-aos-duration="2000"
+          >
             <img className=" w-[300px] m-auto " src={phone2}></img>
           </div>
         </div>
@@ -146,23 +167,27 @@ const Home = () => {
         // style={containerStyle}
         className="bg-gray-900 w-full h-full px-5 py-10 text-center bg-fixed bg-no-repeat bg-cover md:px-28 md:bg:-left backdrop-brightness-100"
       >
-        <h1 className="font-extrabold capitalize text-xl text-center justify-center py-10 md:w-3/5 m-auto text-white md:text-[2.5rem] md:leading-[3.2rem]">
-          Be the first to know about update and offers
-        </h1>
-        <h4 className="font-thin tracking-wider text-center justify-center md:w-1/2 m-auto text-white md:text-[1.5rem]">
-          Join our mailing list
-        </h4>
-        <form className="justify-between my-7 md:w-5/6 mx-auto pb-20">
-          <div className="md:flex md:gap-4">
-            <input
-              className="p-2.5 md:p-4 md:w-[70%] w-full rounded-md text-[16px] outline-none"
-              placeholder="ayomide@gmail.com"
-            ></input>
-            <button className="px-16 p-2.5 md:p-4 w-full mt-5 md:mt-0 cursor-pointer rounded-md bg-[#FF6000] text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000] md:w-1/6">
-              Join
-            </button>
-          </div>
-        </form>
+        <div data-aos="fade-up"
+              data-aos-duration="3000">
+          <h1 className="font-extrabold capitalize text-xl text-center justify-center py-10 md:w-3/5 m-auto text-white md:text-[2.5rem] md:leading-[3.2rem]">
+            Be the first to know about update and offers
+          </h1>
+          <h4 className="font-thin tracking-wider text-center justify-center md:w-1/2 m-auto text-white md:text-[1.5rem]">
+            Join our mailing list
+          </h4>
+          <form className="justify-between my-7 md:w-5/6 mx-auto pb-20">
+            <div className="md:flex md:gap-4">
+              <input
+                className="p-2.5 md:p-4 md:w-[70%] w-full rounded-md text-[16px] outline-none"
+                placeholder="ayomide@gmail.com"
+              ></input>
+              <button className="px-16 p-2.5 md:p-4 w-full mt-5 md:mt-0 cursor-pointer rounded-md bg-[#FF6000] text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000] md:w-1/6">
+                Join
+              </button>
+            </div>
+          </form>
+        </div>
+
       </section>
 
       <footer className="bg-[#FF6000] md:px-24 px-5 py-16 text-white text-[16px]">
@@ -181,7 +206,7 @@ const Home = () => {
           </div>
 
           <div className="md:w-[35%] leading-10 text-left">
-            <p>Quick Links</p>
+            <p className="underline">Quick Links</p>
             <p>About Us</p>
             <p>FAQs</p>
             <p>Ecosystem</p>
@@ -199,7 +224,7 @@ const Home = () => {
 
         <div className="justify-between md:flex ">
           <div>
-            <p> &copy; {new Date().getFullYear() } SmartParcel || All Rights Reserved.</p>
+            <p> &copy; {new Date().getFullYear()} SmartParcel || All Rights Reserved.</p>
             <div className="flex my-5 mt-5 gap-7">
               <BsFacebook />
               <BsTwitter />
