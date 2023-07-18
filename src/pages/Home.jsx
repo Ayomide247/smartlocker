@@ -1,27 +1,27 @@
-import Navbar from "../component/Navbar";
-import appstore from "../assets/image/appStore.jpg";
-import google from "../assets/image/google.jpg";
+
 import whiteAppStore from "../assets/image/whiteAppStore.png";
 import whiteGooglePlay from "../assets/image/whiteGooglePlay.png";
-import banner1 from "../assets/image/banner1.jpg";
+
+import parcel from "../assets/image/autoparcel.jpg";
+import bgbanner from "../assets/image/h2.png";
 import phone from "../assets/image/phone.png";
 import phone2 from "../assets/image/phone2.png";
 import smartlogo from "../assets/image/smartparcel_green_2.png";
-import bgbanner from "../assets/image/h2.png";
-import parcel from "../assets/image/autoparcel.jpg";
 
+import { useEffect, useMemo, useState } from "react";
 import {
-  BsArrowLeftCircle,
-  BsArrowRightCircle,
-  BsArrowDownCircle,
-  BsInstagram,
   BsFacebook,
-  BsTwitter,
+  BsInstagram,
   BsLinkedin,
+  BsTwitter
 } from "react-icons/bs";
-import { FaRegMoneyBillAlt } from "react-icons/fa";
+import { FiChevronLeft, FiChevronRight } from "../assets/icons";
+import { HeroContainer, SingleFaq, SingleService } from "../component";
+import { faqsData, servicesData } from "../utils/data";
 
 const Home = () => {
+  const faqsItem = useMemo(() => faqsData, [])
+  const [faqs, setFaqs] = useState(faqsData);
   const containerStyle = {
     backgroundImage: `url(${bgbanner})`,
   };
@@ -29,189 +29,111 @@ const Home = () => {
   const bgImgStyle = {
     backgroundImage: `url(${parcel})`,
   };
+
+
+  // update faqs isOpen property on click of handler 
+  const handleFaqClick = (id) => {
+    const updatedFaqs = faqs.map((item, i) => {
+      console.log(id)
+      if (item.id === id) {
+        item.isOpen = !item.isOpen;
+      } else {
+        item.isOpen = false;
+      }
+      return item
+    })
+    setFaqs(updatedFaqs);
+  }
+
+  useEffect(() => {
+    console.log(faqs)
+  }, [faqs])
+
+
   return (
     <section className="p-0 m-0 text-slate-700">
-      <Navbar />
-      <section className="mt-[8rem] w-full text-center ">
-        <div className="justify-between px-5 text-center md:grid md:grid-cols-2 md:px-24 md:text-start">
-          <div>
-            <div className="font-extrabold md:text-[4rem] text-[2rem] w-full">
-              <h1>Secured</h1>
-              <h1>Simplified Logistics</h1>
-              <h1>
-                For <span className="text-[#FF6000]">Africa</span>
-              </h1>
-            </div>
-            <p className="md:w-[70%] font-medium my-16 text-[19px]">
-              SmartParcel provides individuals, businesses and government
-              organizations with better logistics services prioritizing speed,
-              security and convenience
-            </p>
-            <div className="flex gap-10 ">
-              <img
-                className="md:w-[170px] h-[50px] w-[150px]"
-                src={appstore}
-              ></img>
-              <img
-                className="md:w-[170px] h-[50px] w-[150px]"
-                src={google}
-              ></img>
-            </div>
-          </div>
-          <div className="my-10">
-            <img className="md:w-[75%] md:float-right" src={banner1}></img>
-          </div>
-        </div>
-      </section>
+      
+      <HeroContainer/>
 
       <section
         style={bgImgStyle}
-        className="w-full h-full md:px-24 py-10 mt-10 text-center bg-fixed md:bg-left bg-no-repeat bg-cover opacity-80 text-[#FF6000]"
+        className="w-full h-full md:px-24 py-10 mt-10 text-center bg-fixed md:bg-left bg-no-repeat bg-cover text-[#FF6000]"
       >
         <div className="justify-between gap-24 px-5 py-16 md:flex md:px-24 md:flex-cols-3">
           <div className="py-16 bg-inherit">
-            <img className="w-[60%] m-auto" src={phone}></img>
+            <img className="w-[65%] m-auto" src={phone}></img>
           </div>
 
-          <div className="md:w-[40%] m-auto text-center">
+          <div className="md:w-[50%] m-auto text-center">
             <h1 className="font-extrabold md:text-[3rem] text-[2rem] md:text-start">
               Easy & convenient Logistics Service
             </h1>
-            <p className="my-10 font-semibold text-[20px] md:text-start leading-8 md:w-[80%]">
+            <p className="my-10 text-[18px] md:text-start leading-8 text-white">
               The Premier Smartlocker Solution for Logistics in Nigeria. Our
               SmartParcel Lockers are express self-servicing machines designed
               to automate pick-up and delivery of packages.
             </p>
 
-            <button className="py-3 px-9 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000]">
-              Get Started
-            </button>
+            <div className="md:text-start">
+              <button className="py-3 px-9 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000]">
+                Get Started
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#F1620C] text-[#ffffffff] py-10 md:px-24 px-5">
+      <section className="bg-[#f1640cfb] px-5 text-[#ffffffff] py-10 md:px-28">
         <div className="justify-between md:flex md:flex-cols-2">
-          <div className="text-center md:w-1/2">
-            <h1 className="font-extrabold md:text-[3rem] text-[2rem] md:text-start my-7">
-              Who we are.
-            </h1>
-            <p className="my-10 font-medium text-[18px] text-start leading-8 md:w-[80%]">
+          <div className="text-center mt-6">
+            <div className="flex justify-between items-center">
+              <h1 className="font-extrabold md:text-[3rem] text-[2rem] md:text-start">
+                SmartParcel Logistics Services
+              </h1>
+              <div className="hidden md:flex justify-between gap-6">
+                <span className="w-12 h-12 rounded-full border-[1.5px] boder-white grid place-content-center text-lg cursor-pointer">
+                  <FiChevronLeft />
+                </span>
+                <span className="w-12 h-12 rounded-full border-[1.5px] boder-white grid place-content-center text-lg cursor-pointer">
+                  <FiChevronRight />
+                </span>
+              </div>
+            </div>
+            <p className="my-2 text-[16px] text-start leading-7 md:w-[50%]">
               We Executed Partnership with Nigerian Postal Services (NIPOST) for
               deployment of Smart Lockers across 774 local governments and 955
               post offices with over 3000 postal agencies across Nigeria.
             </p>
           </div>
-          <div className="hidden md:flex md:justify-between gap-14 md:text-[3rem] text-[2rem] m-auto my-9 ">
-            <BsArrowLeftCircle />
-            <BsArrowRightCircle />
-          </div>
         </div>
-        <div className="flex justify-center gap-5 px-5 my-10 md:px-28">
-          <div class=" md:w-[25%] rounded-xl overflow-hidden shadow-lg bg-[#ffffffff] py-10 pl-9 items-center">
-            <div className="bg-[#F6D7C4] p-5 w-fit rounded-md ">
-              <FaRegMoneyBillAlt className="text-[#F1620C] text-3xl" />
-            </div>
-            <div class=" py-4 text-start ">
-              <div class="font-bold text-2xl my-5 text-slate-700">
-                Cost Effective
-              </div>
-              <p class="text-gray-700 font-semibold text-[16px] text-start leading-8 w-[80%]">
-                Spend less to send and receive your packages with our affordable
-                pricing.
-              </p>
-            </div>
-          </div>
-
-          <div class="hidden md:grid md:w-[25%] rounded-xl overflow-hidden shadow-lg bg-[#ffffffff] py-10 px-5 items-center">
-            <div className="bg-[#F6D7C4] p-5 w-fit rounded-md ">
-              <FaRegMoneyBillAlt className="text-[#F1620C] text-3xl" />
-            </div>
-            <div class=" py-4 text-start ">
-              <div class="font-bold text-2xl my-5 text-slate-700">
-                Track your Delivery
-              </div>
-              <p class="text-gray-700 font-semibold text-[16px] text-start leading-8 w-[80%]">
-                Spend less to send and receive your packages with our affordable
-                pricing.
-              </p>
-            </div>
-          </div>
-
-          <div class=" hidden md:grid md:w-[25%] rounded-xl overflow-hidden shadow-lg bg-[#ffffffff] py-10 pl-9 items-center">
-            <div className="bg-[#F6D7C4] p-5 w-fit rounded-md ">
-              <FaRegMoneyBillAlt className="text-[#F1620C] text-3xl" />
-            </div>
-            <div class=" py-4 text-start ">
-              <div class="font-bold text-2xl my-5 text-slate-700">
-                Cost Effective
-              </div>
-              <p class="text-gray-700 font-semibold text-[16px] text-start leading-8 w-[80%]">
-                Spend less to send and receive your packages with our affordable
-                pricing.
-              </p>
-            </div>
-          </div>
+        <div className="flex gap-5 my-7 w-[100%] md:w-[1200px] overflow-x-scroll pb-16">
+          {
+            servicesData.map((data) => (
+              <SingleService key={data.id} data={data} />
+            ))
+          }
         </div>
 
-        <div className="md:hidden flex  gap-14  text-[2rem] text-center my-9 justify-center">
-          <BsArrowLeftCircle />
-          <BsArrowRightCircle />
-        </div>
       </section>
 
-      <section className=" bg-[#FF60001A] md:px-24 px-5 py-5 ">
-        <h1 className="font-extrabold md:text-[3rem] text-[2rem] text-center justify-center py-16">
+      <section className=" bg-[#FF60001A] md:px-28 px-5 md:pb-32">
+        <h1 className="font-extrabold leading-10 pt-8 text-[1.5rem] md:text-[3rem] text-center md:text-start md:pt-20">
           Frequently asked questions
         </h1>
-        <div className="jdustify-between md:flex ">
+        <div className="md:flex items-start">
           <div className="md:w-[50%]">
-            <div className="border-b-2 border-[#F1620C] w-[100%] "></div>
-            <div className="flex justify-between my-10 text-lg font-bold md:text-2xl text-slate-700">
-              <p className="">01</p>
-              <p className="w-[70%]">Whats is a Smart Locker?</p>
-              <span>
-                <BsArrowDownCircle className="text-[#F1620C]" />
-              </span>
-            </div>
 
-            <div className="border-b-2 border-[#F1620C] w-[100%] "></div>
-            <div className="flex justify-between my-10 text-lg font-bold md:text-2xl text-slate-700">
-              <p className="">02</p>
-              <p className="w-[70%]">How do I track my parcel?</p>
-              <span>
-                <BsArrowDownCircle className="text-[#F1620C]" />
-              </span>
-            </div>
+            {
+              faqs.map((data, index) => (
+                <SingleFaq
+                  key={data.id}
+                  faq={data}
+                  id={data.id}
+                  handleFaqClick={handleFaqClick}
+                />
+              ))
+            }
 
-            <div className="border-b-2 border-[#F1620C] w-[100%] "></div>
-            <div className="flex justify-between my-10 text-lg font-bold md:text-2xl text-slate-700">
-              <p className="">03</p>
-              <p className="w-[70%]">Do you have a weight limit?</p>
-              <span>
-                <BsArrowDownCircle className="text-[#F1620C]" />
-              </span>
-            </div>
-
-            <div className="border-b-2 border-[#F1620C] w-[100%] "></div>
-            <div className="flex justify-between my-10 text-lg font-bold md:text-2xl text-slate-700">
-              <p className="">04</p>
-              <p className="w-[70%]">What sort of item can’t I send?</p>
-              <span>
-                <BsArrowDownCircle className="text-[#F1620C]" />
-              </span>
-            </div>
-
-            <div className="border-b-2 border-[#F1620C] w-[100%] "></div>
-            <div className="flex justify-between my-10 text-lg font-bold md:text-2xl text-slate-700">
-              <p className="">05</p>
-              <p className="w-[70%]">
-                Can I put two or more parcel in the same locker compartment?
-              </p>
-              <span>
-                <BsArrowDownCircle className="text-[#F1620C]" />
-              </span>
-            </div>
           </div>
 
           <div className=" w-[50%] mx-auto ">
@@ -221,34 +143,36 @@ const Home = () => {
       </section>
 
       <section
-        style={containerStyle}
-        className="w-full h-full px-5 py-10 text-center bg-fixed bg-no-repeat bg-cover md:px-24 md:bg:-left opacity-80"
+        // style={containerStyle}
+        className="bg-gray-900 w-full h-full px-5 py-10 text-center bg-fixed bg-no-repeat bg-cover md:px-28 md:bg:-left backdrop-brightness-100"
       >
-        <h1 className="font-extrabold text-[2rem] md:text-[3rem] text-center justify-center py-10 md:w-1/2 m-auto text-[#F1620C]">
-          BE THE FIRST TO KNOW ABOUT UPDATE AND OFFERS
+        <h1 className="font-extrabold capitalize text-xl text-center justify-center py-10 md:w-3/5 m-auto text-white md:text-[2.5rem] md:leading-[3.2rem]">
+          Be the first to know about update and offers
         </h1>
-        <h4 className="font-medium text-[1.5rem] md:text-[2rem] text-center justify-center py-5 md:w-1/2 m-auto text-[#F1620C] ">
+        <h4 className="font-thin tracking-wider text-center justify-center md:w-1/2 m-auto text-white md:text-[1.5rem]">
           Join our mailing list
         </h4>
-        <form className="justify-between md:mx-16 md:flex my-7">
-          <input
-            className="p-4 md:p-5 md:w-[70%] w-full rounded-full text-[16px] md:text-[20px] outline-none"
-            placeholder="smartparcel@gmail.com"
-          ></input>
-          <button className="font-bold px-16 py-2 mt-5 md:mt-0 cursor-pointer rounded-md bg-[#FF6000] text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000]">
-            Join
-          </button>
+        <form className="justify-between my-7 md:w-5/6 mx-auto pb-20">
+          <div className="md:flex md:gap-4">
+            <input
+              className="p-2.5 md:p-4 md:w-[70%] w-full rounded-md text-[16px] outline-none"
+              placeholder="ayomide@gmail.com"
+            ></input>
+            <button className="px-16 p-2.5 md:p-4 w-full mt-5 md:mt-0 cursor-pointer rounded-md bg-[#FF6000] text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000] md:w-1/6">
+              Join
+            </button>
+          </div>
         </form>
       </section>
 
-      <footer className="bg-[#FF6000] md:px-24 px-5 py-16 text-white md:text-[20px] text-[16px]">
-        <div className="justify-between text-center md:flex flex-cols-3 ">
-          <div className="md:w-[35%]">
-            <div>
+      <footer className="bg-[#FF6000] md:px-24 px-5 py-16 text-white text-[16px]">
+        <div className="justify-between items-center text-center md:flex flex-cols-3 ">
+          <div className="md:w-3/6">
+            <div className="pb-4">
               <img className="w-[50%]" src={smartlogo}></img>
             </div>
-            <div>
-              <p className="my-5 leading-10 text-center md:my-0 md:text-start ">
+            <div className="md:w-4/6">
+              <p className="my-5 leading-7 text-center md:my-0 md:text-start ">
                 The Premier Smartlocker Solution for Logistics in Nigeria. Our
                 SmartParcel Lockers are express self-servicing machines designed
                 to automate pick-up and delivery of packages.
@@ -256,7 +180,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="md:w-[35%] leading-10 ">
+          <div className="md:w-[35%] leading-10 text-left">
             <p>Quick Links</p>
             <p>About Us</p>
             <p>FAQs</p>
@@ -264,18 +188,18 @@ const Home = () => {
             <p>Support</p>
           </div>
 
-          <div className="md:w-[15%] text-start mt-10 ">
+          <div className="md:w-[15%] text-start">
             <p className="font-medium underline">Our Address</p>
             <p className="mt-5">No 9, MacDonald Ikoyi, Lagos State, Nigeria.</p>
             <p className="mt-10">+234 913 111 1160 hello@smartparcel.ng</p>
           </div>
         </div>
 
-        <div className="border border-b-2-[#F6D7C4] my-10"></div>
+        <div className="border-b border-b-[#F6D7C4] my-10"></div>
 
         <div className="justify-between md:flex ">
           <div>
-            <p>@2023 SmartParcel || All Rights Reserved.</p>
+            <p> &copy; {new Date().getFullYear() } SmartParcel || All Rights Reserved.</p>
             <div className="flex my-5 mt-5 gap-7">
               <BsFacebook />
               <BsTwitter />
@@ -286,11 +210,11 @@ const Home = () => {
 
           <div className="flex gap-5">
             <img
-              className="md:w-[170px] h-[50px] w-[150px]"
+              className="md:w-[170px] h-[50px] w-[150px] cursor-pointer"
               src={whiteAppStore}
             ></img>
             <img
-              className="md:w-[170px] h-[50px] w-[150px]"
+              className="md:w-[170px] h-[50px] w-[150px] cursor-pointer"
               src={whiteGooglePlay}
             ></img>
           </div>

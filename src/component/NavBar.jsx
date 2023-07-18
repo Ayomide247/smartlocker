@@ -12,7 +12,7 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-[80px] top-0 left-0 flex justify-between items-center bg-[#ffffffff] text-slate-700 text-md font-medium z-10 shadow px-5 md:px-24">
+    <div className="fixed w-full h-[80px] top-0 left-0 flex justify-between items-center bg-[#ffffffff] text-slate-700 text-md font-medium z-10 shadow px-5 md:px-28">
       <div>
         <Link to={"/"}>
           <img src={Logo} alt="Logo Image" style={{ width: "200px" }} />
@@ -20,27 +20,27 @@ const Navbar = () => {
       </div>
 
       <div className="">
-        <ul className="hidden gap-5 md:flex ">
-          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+        <ul className="hidden gap-8 md:flex ">
+          <Link to='/' className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+            Home
+          </Link>
+          <Link className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
             How it works
-          </li>
-          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+          </Link>
+          <Link className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
             Parcel History
-          </li>
-          <li className="nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
-            <Link to={"/SignUp"}>Support</Link>
-          </li>
+          </Link>
+          <Link to='/SignUp' className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+            Support
+          </Link>
         </ul>
       </div>
 
       <div className="justify-between hidden gap-5 lg:flex">
-        <button className="border-2 border-[#FF6000] py-2 px-5 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff]">
+        <button className="border border-[#FF6000] py-2 px-7 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff] transition-all duration-300 ease-in">
           Login
         </button>
-        <button className=" py-2 px-5 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#ffffffff] border-2 border-[#FF6000] hover:text-slate-700">
+        <button className=" py-2 px-6 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#ffffffff] border border-[#FF6000] hover:text-slate-700 transition-all duration-300 ease-in">
           Create an account
         </button>
       </div>
