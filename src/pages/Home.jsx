@@ -264,8 +264,8 @@ const Home = () => {
             <p>Support</p>
           </div>
 
-          <div className="md:w-[15%] text-start mt-10">
-            <p className="">Our Address</p>
+          <div className="md:w-[15%] text-start mt-10 ">
+            <p className="font-medium underline">Our Address</p>
             <p className="mt-5">No 9, MacDonald Ikoyi, Lagos State, Nigeria.</p>
             <p className="mt-10">+234 913 111 1160 hello@smartparcel.ng</p>
           </div>
