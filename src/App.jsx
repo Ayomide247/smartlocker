@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import SignUp from "./pages/SignUp";
-import SignIn from "./pages/SignIn";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import { Home } from "./pages";
 import { Suspense, useEffect } from "react";
 import { Loader1 } from "./component";
@@ -18,8 +18,8 @@ function App() {
       <Suspense fallback={<Loader1 />}>
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Suspense>
     </div>
