@@ -21,7 +21,10 @@ const Navbar = () => {
 
       <div className="">
         <ul className="hidden gap-8 md:flex ">
-          <Link to='/' className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+          <Link
+            to="/"
+            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]"
+          >
             Home
           </Link>
           <Link className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
@@ -30,17 +33,26 @@ const Navbar = () => {
           <Link className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
             Parcel History
           </Link>
-          <Link to='/SignUp' className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+          <Link
+            to="/SignUp"
+            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]"
+          >
             Support
           </Link>
         </ul>
       </div>
 
       <div className="justify-between hidden gap-5 lg:flex">
-        <Link to='/login' className="border border-[#FF6000] py-2 px-7 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff] transition-all duration-300 ease-in">
+        <Link
+          to="/login"
+          className="border border-[#FF6000] py-2 px-7 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff] transition-all duration-300 ease-in"
+        >
           Login
         </Link>
-        <Link to='/register' className=" py-2 px-6 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#ffffffff] border border-[#FF6000] hover:text-slate-700 transition-all duration-300 ease-in">
+        <Link
+          to="/register"
+          className=" py-2 px-6 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#ffffffff] border border-[#FF6000] hover:text-slate-700 transition-all duration-300 ease-in"
+        >
           Create an account
         </Link>
       </div>
@@ -60,8 +72,12 @@ const Navbar = () => {
         <li className="py-6 ">Track Parcel</li>
         <li className="py-6 ">Parcel History</li>
         <li className="py-6 ">Locker locations</li>
-        <li className="py-6 ">Sign In</li>
-        <li className="py-6 ">Contact</li>
+        <Link to="./Login" className="py-6 ">
+          Logcls In
+        </Link>
+        <Link to="./Register" className="py-6 ">
+          Register
+        </Link>
       </ul>
     </div>
   );
