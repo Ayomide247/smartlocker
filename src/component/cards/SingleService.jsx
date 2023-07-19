@@ -4,7 +4,7 @@ import { FaRegMoneyBillAlt } from '../../assets/icons'
 const SingleService = ({data}) => {
     const { text, title, icon } = data
     return (
-        <div className="min-w-[18rem] rounded-2xl bg-[#ffffffff] py-12 p-9 items-center cursor-pointer">
+        <div className="min-w-[18rem] rounded-2xl bg-[#ffffffff] py-12 p-9 items-center cursor-pointer border-l-[6px] hover:border-l-[6px] hover:translate-y-4 hover:border-green-500 hover:-skew-x-1 transition-all duration-500 ease-in">
             <div className="bg-[#f6eae2] p-5 w-fit rounded-md ">
                 {icon}
             </div>

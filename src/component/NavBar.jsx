@@ -37,12 +37,12 @@ const Navbar = () => {
       </div>
 
       <div className="justify-between hidden gap-5 lg:flex">
-        <button className="border border-[#FF6000] py-2 px-7 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff] transition-all duration-300 ease-in">
+        <Link to='/login' className="border border-[#FF6000] py-2 px-7 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff] transition-all duration-300 ease-in">
           Login
-        </button>
-        <button className=" py-2 px-6 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#ffffffff] border border-[#FF6000] hover:text-slate-700 transition-all duration-300 ease-in">
+        </Link>
+        <Link to='/register' className=" py-2 px-6 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#ffffffff] border border-[#FF6000] hover:text-slate-700 transition-all duration-300 ease-in">
           Create an account
-        </button>
+        </Link>
       </div>
 
       {/*Hamburger*/}

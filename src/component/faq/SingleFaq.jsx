@@ -4,8 +4,10 @@ import { FiChevronUp, FiChevronDown } from "../../assets/icons"
 const SingleFaq = ({ faq, id, handleFaqClick }) => {
     const { title, text, icon, isOpen } = faq
     return (
-        <div className="my-5 text-slate-700 border-t pt-6 border-[#ff620053] w-[100%] relative md:mt-10">
-            <div className="flex justify-between gap-x-4 md:gap-x-8">
+        <div className="my-5 text-slate-700 border-t pt-6 border-[#ff620053] w-[100%] relative md:mt-10"
+        >
+            <div className="flex justify-between gap-x-4 md:gap-x-8"
+            >
                 <h1 className="font-semibold text-md md:text-xl">0{id}</h1>
                 <div className="w-[75%] mr-auto">
                     <h1 className="font-semibold text-md md:text-xl md:w-[70%]">{title}</h1>

@@ -1,16 +1,27 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import SignUp from "./pages/SignUp";
-import SignIn from "./pages/SignIn";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import { Home } from "./pages";
+import { Suspense, useEffect } from "react";
+import { Loader1 } from "./component";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <div className=" md:w-[100%] lg:w-full ">
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/SignIn" element={<SignIn />} />
-      </Routes>
+      <Suspense fallback={<Loader1 />}>
+        <Routes>
+          <Route index path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
