@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div className="m-auto w-screen h-screen">
-      <div className="flex flex-col relative">
+    <div className="w-screen h-screen m-auto">
+      <div className="relative flex flex-col">
         <div className="h-[20rem]"></div>
         <div className="h-[calc(100vh_-_20rem)] bg-slate-900">
       <div className="hidden"><Navbar /></div>
       <section className="px-5 py-3 mx-6 max-w-[25rem] bg-white shadow-lg absolute top-0 left-0 right-0 mt-24 md:m-auto md:mt-24 rounded-sm md:px-8">
-        <div className="w-40 mx-auto py-6"> <Link to='/'><img className="" src={LOGO} alt="" /></Link> </div>
+        <div className="w-40 py-6 mx-auto"> <Link to='/'><img className="" src={LOGO} alt="" /></Link> </div>
         <form id="container" action="" method="">
           <div className="">
             <input

@@ -20,7 +20,7 @@ const Navbar = () => {
       </div>
 
       <div className="">
-        <ul className="hidden gap-8 md:flex ">
+        <ul className="hidden gap-8 lg:flex ">
           <Link
             to="/"
             className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]"
@@ -44,7 +44,7 @@ const Navbar = () => {
 
       <div className="justify-between hidden gap-5 lg:flex">
         <Link
-          to="/login"
+          to="/Login"
           className="border border-[#FF6000] py-2 px-7 rounded-md hover:bg-[#FF6000]  hover:text-[#ffffffff] transition-all duration-300 ease-in"
         >
           Login
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
 
       {/*Hamburger*/}
-      <div onClick={handleClick} className="z-10 md:hidden">
+      <div onClick={handleClick} className="z-10 lg:hidden">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
       {/*Mobile Menu*/}
@@ -73,7 +73,7 @@ const Navbar = () => {
         <li className="py-6 ">Parcel History</li>
         <li className="py-6 ">Locker locations</li>
         <Link to="./Login" className="py-6 ">
-          Logcls In
+          Log In
         </Link>
         <Link to="./Register" className="py-6 ">
           Register

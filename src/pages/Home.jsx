@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import whiteAppStore from "../assets/image/whiteAppStore.png";
 import whiteGooglePlay from "../assets/image/whiteGooglePlay.png";
 
@@ -39,7 +41,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log(faqs);
+    // console.log(faqs);
   }, [faqs]);
 
   return (
@@ -74,9 +76,12 @@ const Home = () => {
             </p>
 
             <div className="md:text-start">
-              <button className="py-3 px-9 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000]">
-                Get Started
-              </button>
+              <Link
+                to={"/Stage"}
+                className="py-3 px-9 rounded-md bg-[#FF6000]   text-[#ffffffff] hover:bg-[#FF7000] border-2 border-[#FF6000]"
+              >
+                Book Now
+              </Link>
             </div>
           </div>
         </div>
@@ -156,7 +161,7 @@ const Home = () => {
 
       <section
         // style={containerStyle}
-        className="w-full h-full px-5 py-10 text-center bg-fixed bg-gray-900 bg-no-repeat bg-cover md:px-28 md:bg:-left backdrop-brightness-100"
+        className="w-full h-full px-5 py-10 text-center bg-gray-900 bg-no-repeat bg-cover md:px-28 md:bg:-left backdrop-brightness-100"
       >
         <div data-aos="fade-up" data-aos-duration="3000">
           <h1 className="font-extrabold capitalize text-xl text-center justify-center py-10 md:w-3/5 m-auto text-white md:text-[2.5rem] md:leading-[3.2rem]">
