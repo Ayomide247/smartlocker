@@ -33,15 +33,15 @@ const SingleRider = ({ first_name, last_name, username, duration, price, type, a
           <span className='hidden font-bold text-xs uppercase text-orange-400 md:block'>{type}</span>
         </div>
         <div className='flex flex-col absolute top-1 right-0 md:hidden'>
-          <span class="text-sm font-bold text-green-400 ">{price}</span>
+          <span className="text-sm font-bold text-green-400 ">{price}</span>
           <span className='font-bold text-xs'>{type}</span>
         </div>
       </div>
       <div className="border-t border-slate-200 my-4"></div>
       <div className="flex justify-between items-center mx-auto mt-2 w-[80%] md:w-1/2">
-        <span className="font-medium">{JSON.parse(localStorage.getItem('from')) || 'Lagos'}</span>
+        <span className="font-medium">{JSON.parse(localStorage.getItem('sender_information'))?.area?.label || 'Lagos'}</span>
         <span className="text-orange-400"><FaBicycle /></span>
-        <span className="font-medium">{JSON.parse(localStorage.getItem('to')) || 'Abuja'}</span>
+        <span className="font-medium">{JSON.parse(localStorage.getItem('receiver_information'))?.area?.label || 'Abuja'}</span>
       </div>
     </div>
   )

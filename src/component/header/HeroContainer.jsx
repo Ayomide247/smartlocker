@@ -2,7 +2,7 @@ import React from "react";
 import appstore from "../../assets/image/appStore.jpg";
 import google from "../../assets/image/google.jpg";
 import banner1 from "../../assets/image/banner1.jpg";
-import Navbar from "../Navbar";
+import Navbar from "../NavBar";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { SLIDER_2, SLIDER_3 } from "../../assets/image";
@@ -34,7 +34,7 @@ const HeroContainer = () => {
               security and convenience
             </p>
             <div
-              className="flex gap-5"
+              className="flex gap-5 justify-center md:justify-start"
               data-aos="fade-up"
               data-aos-duration="2000"
             >

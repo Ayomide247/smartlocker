@@ -10,6 +10,8 @@ import Stage from "./pages/Booking";
 import Dashboard from "./pages/Dashboard";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AboutUs from "./pages/AboutUs";
+import HowItWorks from "./pages/HowItWorks";
 
 function App() {
   useEffect(() => {
@@ -24,8 +26,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/Stage" element={<Stage />} />
-          <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/Receiver" element={<ReceiverInformation />} />
+          <Route path="AboutUs" element={<AboutUs />} />
+          <Route path="/HowItWorks" element={<HowItWorks />} />
         </Routes>
       </Suspense>
       <ToastContainer />

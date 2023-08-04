@@ -27,7 +27,8 @@ const SelectRider = ({ isModalVisible, handleClose }) => {
     publicKey,
     text: "Pay Now",
     onSuccess: () => {
-      localStorage.clear()
+      localStorage.removeItem('sender_information')
+      localStorage.removeItem('receiver_information')
       handleClose(),
         toast.success('Booking successfull! ')
       navigate('/')
@@ -48,6 +49,7 @@ const SelectRider = ({ isModalVisible, handleClose }) => {
       <div className="fixed inset-0 z-10 overflow-y-auto">
         <div className="flex justify-center p-4 text-center md:mt-16">
           <div className="relative overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl w-[85vw] sm:my-8 sm:w-full sm:max-w-5xl">
+            <h2 className="text-orange-400 font-bold text-xl px-5 pt-4 uppercase">Select your Rider</h2>
             <div className="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4 h-[400px] overflow-y-scroll">
               <div className="grid md:grid-cols-2 md:gap-5">
                 {

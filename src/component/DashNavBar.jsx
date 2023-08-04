@@ -9,19 +9,23 @@ import { BiChevronDown } from "react-icons/bi";
 
 // import { FaBars, FaTimes } from "react-icons/fa";
 
-const DashNavbar = () => {
+const DashNavbar = ({ setShowSidebar }) => {
   const [nav, setNav] = useState(false);
 
   const handleClick = () => {
     setNav(!nav);
   };
+  const handleToggleSidebar = () => setShowSidebar((prevState) => {
+    return !prevState
+  })
   return (
     <div
-      className="h-[80px] left-0 items-center bg-[#ffffffff] text-slate-700 text-md font-medium fixed top-0 md:left-72 md:w-[82%] w-full flex justify-between
-      md:m-0 px-5 z-10 shadow md:shadow-none "
+      className="h-[80px] items-center bg-[#ffffffff] text-slate-700 text-md font-medium w-full flex justify-between md:m-0 px-5 z-10 shadow md:shadow-none md:px-8"
     >
-      <Link to={"/"}>
-        <img className="w-[30px]" src={hamburger} alt="Logo Image" />
+      <Link to={"/dashboard"}
+        onClick={handleToggleSidebar}
+      >
+        <img className="w-[25px]" src={hamburger} alt="Logo Image" />
       </Link>
 
       <img className="w-[120px] md:hidden" src={smartlogo}></img>

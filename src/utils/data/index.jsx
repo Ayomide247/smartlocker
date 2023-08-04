@@ -1,4 +1,16 @@
 import { FaRegMoneyBillAlt, FiChevronUp } from "../../assets/icons";
+import userPic1 from "../../assets/image/naija1.jpeg";
+import userPic2 from "../../assets/image/naija2.jpeg";
+import userPic3 from "../../assets/image/naija3.jpeg";
+import userPic4 from "../../assets/image/naija4.jpeg";
+import userPic5 from "../../assets/image/naija5.jpeg";
+import userPic6 from "../../assets/image/naija6.jpeg";
+import userPic7 from "../../assets/image/whatsapp.png";
+import userPic8 from "../../assets/image/naija8.jpg";
+import { BsFillHouseDoorFill, BsPersonFillGear } from "react-icons/bs";
+import { FaBell, FaRegCreditCard, FaTruck } from "react-icons/fa";
+
+
 
 export const servicesData = [
   {
@@ -179,101 +191,101 @@ export const Lockers = [
 export const RIDERS = [
   {
     "id": 1,
-    "first_name": "Effie",
-    "last_name": "Antonescu",
+    "first_name": "Efe",
+    "last_name": "Antony",
     "username": "eantonescu0",
     "duration": "2hr 42min",
-    "price": "₦1250.46",
+    "price": "₦2250.46",
     "type": "Express",
-    "avatar": "https://robohash.org/aliquamaccusantiumblanditiis.png?size=50x50&set=set1"
+    "avatar": "https://robohash.org/quaeratcumqueincidunt.png?size=50x50&set=set1"
   },
   {
     "id": 2,
-    "first_name": "Ilka",
-    "last_name": "Maciejewski",
+    "first_name": "Ika",
+    "last_name": "Micheal",
     "username": "imaciejewski1",
-    "duration": "5hr 25min",
-    "price": "₦9.01",
+    "duration": "1hr 25min",
+    "price": "₦3500.01",
     "type": "Express",
     "avatar": "https://robohash.org/etveniamdolores.png?size=50x50&set=set1"
   },
   {
     "id": 3,
-    "first_name": "Helaine",
-    "last_name": "Windless",
+    "first_name": "Hellen",
+    "last_name": "Mary",
     "username": "hwindless2",
-    "duration": "5hr 25min",
-    "price": "₦5.89",
-    "type": "Express",
+    "duration": "2Days 00min",
+    "price": "₦2100.89",
+    "type": "Regular",
     "avatar": "https://robohash.org/providentvoluptatenecessitatibus.png?size=50x50&set=set1"
   },
   {
     "id": 4,
-    "first_name": "Mil",
-    "last_name": "Weiner",
+    "first_name": "Miller",
+    "last_name": "Akpan",
     "username": "mweiner3",
     "duration": "5hr 25min",
     "price": "₦1250.77",
-    "type": "Express",
+    "type": "Regular",
     "avatar": "https://robohash.org/quaeratcumqueincidunt.png?size=50x50&set=set1"
   },
   {
     "id": 5,
-    "first_name": "Ruperto",
-    "last_name": "Huddy",
+    "first_name": "Adewale",
+    "last_name": "Rafiu",
     "username": "rhuddy4",
-    "duration": "2hr 42min",
-    "price": "₦7.31",
+    "duration": "3Days 00min",
+    "price": "₦950.31",
     "type": "Regular",
     "avatar": "https://robohash.org/velanimiipsam.png?size=50x50&set=set1"
   },
   {
     "id": 6,
-    "first_name": "Alyse",
-    "last_name": "Gutch",
+    "first_name": "Ali",
+    "last_name": "Monday",
     "username": "agutch5",
-    "duration": "2hr 42min",
-    "price": "₦6.93",
-    "type": "Regular",
+    "duration": "3hr 42min",
+    "price": "₦3150.00",
+    "type": "Express",
     "avatar": "https://robohash.org/rerumfacilisminus.png?size=50x50&set=set1"
   },
   {
     "id": 7,
     "first_name": "Sarah",
-    "last_name": "Murch",
+    "last_name": "Monica",
     "username": "smurch6",
-    "duration": "2hr 42min",
-    "price": "₦5.40",
+    "duration": "3Days 00min",
+    "price": "₦1100.40",
     "type": "Regular",
     "avatar": "https://robohash.org/fugaarchitectoodio.png?size=50x50&set=set1"
   },
   {
     "id": 8,
-    "first_name": "Lazar",
-    "last_name": "Krolle",
+    "first_name": "Kolade",
+    "last_name": "Mayowa",
     "username": "lkrolle7",
-    "duration": "5hr 25min",
-    "price": "₦1.61",
-    "type": "Regular",
+    "duration": "7hr 25min",
+    "price": "₦2700.61",
+    "type": "Express",
     "avatar": "https://robohash.org/quisquamexrerum.png?size=50x50&set=set1"
   },
   {
     "id": 9,
-    "first_name": "Lorrayne",
-    "last_name": "Mathivon",
+    "first_name": "John",
+    "last_name": "Bovi",
     "username": "lmathivon8",
-    "duration": "2hr 42min",
-    "price": "₦6.80",
-    "type": "Express",
+    "duration": "2Days 42min",
+    "price": "#1200.80",
+    "type": "Regular",
     "avatar": "https://robohash.org/ipsanamnatus.png?size=50x50&set=set1"
   },
   {
     "id": 10,
-    "first_name": "Shena",
-    "last_name": "Foye",
+    "first_name": "Shina",
+    "last_name": "Boye",
     "username": "sfoye9",
     "duration": "2hr 42min",
-    "price": "₦9.29",
+    "price": "₦4500.29",
     "type": "Express",
     "avatar": "https://robohash.org/porrodoloremaut.png?size=50x50&set=set1"
   },
@@ -377,4 +389,88 @@ export const RIDERS = [
   //   "type": "Regular",
   //   "avatar": "https://robohash.org/quidebitispraesentium.png?size=50x50&set=set1"
   // }
+]
+
+export const Cards = [
+  {
+    id: 1,
+    name: "Benjamin Adeyemo",
+    post: "COO & Co-founder",
+    image: userPic8
+  },
+  {
+    id: 2,
+    name: "Udo Nwaogbo",
+    post: "CTO & Co-founder",
+    image: userPic8
+  },
+  {
+    id: 3,
+    name: "Ipadeola Abayomi",
+    post: "IT Manager",
+    image: userPic8
+  },
+  {
+    id: 4,
+    name: "Gabriel Ukachukwu",
+    post: "CFO",
+    image: userPic8
+  },
+  // {
+  //   id: 5,
+  //   name: "Philips Durojaiye",
+  //   post: "Products & Business Development Lead",
+  //   image: userPic8
+  // },
+  // {
+  //   id: 6,
+  //   name: "Roseline Oduleke",
+  //   post: "COO & Co-founder",
+  //   image: userPic8
+  // },
+  // {
+  //   id: 7,
+  //   name: "Roseline Oduleke",
+  //   post: "COO & Co-founder",
+  //   image: userPic8
+  // },
+  // {
+  //   id: 8,
+  //   name: "Roseline Oduleke",
+  //   post: "COO & Co-founder",
+  //   image: userPic8
+  // }
+]
+
+export const Links = [
+  {
+    id: 1,
+    title: 'Dashboard',
+    url: '/dashboard',
+    icon: <BsFillHouseDoorFill />
+  },
+  {
+    id: 2,
+    title: 'Parcel',
+    url: '/parcel',
+    icon: <FaTruck />
+  },
+  {
+    id: 3,
+    title: 'Billings',
+    url: '/billing',
+    icon: <FaRegCreditCard />
+  },
+  {
+    id: 4,
+    title: 'Notifications',
+    url: '/notification',
+    icon: <FaBell />
+  },
+  {
+    id: 5,
+    title: 'Settings',
+    url: '/settings',
+    icon: <BsPersonFillGear />
+  },
 ]

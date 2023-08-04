@@ -12,7 +12,7 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-[80px] top-0 left-0 flex justify-between items-center bg-[#ffffffff] text-slate-700 text-md font-medium z-10 shadow px-5 md:px-28">
+    <div className="fixed w-full h-[80px] top-0 left-0 flex justify-between items-center bg-[#ffffffff] text-slate-700 text-md font-medium z-10 shadow px-5 md:px-28 ">
       <div>
         <Link to={"/"}>
           <img src={Logo} alt="Logo Image" style={{ width: "200px" }} />
@@ -23,21 +23,25 @@ const Navbar = () => {
         <ul className="hidden gap-8 lg:flex ">
           <Link
             to="/"
-            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]"
+            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition transform duration-700 ease-in-out hover:scale-105 hover:border-b-2 hover:border-[#FF6000]"
           >
             Home
           </Link>
-          <Link className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
+          <Link
+            to="/HowItWorks"
+            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition transform duration-700 ease-in-out hover:scale-105 hover:border-b-2 hover:border-[#FF6000]">
             How it works
           </Link>
-          <Link className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]">
-            Parcel History
+          <Link
+            to="/Stage"
+            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition transform duration-700 ease-in-out hover:scale-105 hover:border-b-2 hover:border-[#FF6000]">
+            Book Now
           </Link>
           <Link
-            to="/SignUp"
-            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition duration-500 ease-in-out hover:border-b-2 hover:border-[#FF6000]"
+            to="/AboutUs"
+            className="border-b-2 border-b-[#fff] nav-link hover:text-[#FF6000;] nav-link transition transform duration-700 ease-in-out hover:scale-105 hover:border-b-2 hover:border-[#FF6000]"
           >
-            Support
+            About Us
           </Link>
         </ul>
       </div>
@@ -69,13 +73,34 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-[100%] h-screen bg-slate-50 flex flex-col justify-center items-center text-lg"
         }
       >
-        <li className="py-6 ">Track Parcel</li>
-        <li className="py-6 ">Parcel History</li>
-        <li className="py-6 ">Locker locations</li>
-        <Link to="./Login" className="py-6 ">
+
+
+        <Link
+          to="/"
+          className="py-6 ">
+          Home
+        </Link>
+
+        <Link
+          to="/HowItWorks"
+          className="py-6 ">
+          How it works
+        </Link>
+
+        <Link to="/Stage" className="py-6 ">
+          Book Now
+        </Link>
+
+        <Link
+          to="/AboutUs"
+          className="py-6 ">
+          About Us
+        </Link>
+
+        <Link to="/Login" className="py-6 ">
           Log In
         </Link>
-        <Link to="./Register" className="py-6 ">
+        <Link to="/Register" className="py-6 ">
           Register
         </Link>
       </ul>
